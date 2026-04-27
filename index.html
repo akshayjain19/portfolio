@@ -87,25 +87,27 @@ body{
 /* ── NAV ── */
 nav{
   position:fixed;top:0;left:0;right:0;width:100%;z-index:200;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:1.4rem 2.5rem;
-  mix-blend-mode:normal;
   pointer-events:none;
   box-sizing:border-box;
+  height:3.5rem;
 }
 .nav-menu{
+  position:absolute;top:50%;left:2.5rem;transform:translateY(-50%);
   font-family:'Space Mono',monospace;
   font-size:.72rem;font-weight:700;letter-spacing:.18em;
   text-transform:uppercase;color:var(--yellow);
   cursor:none;pointer-events:all;
   display:flex;align-items:center;gap:.5rem;
-  flex-shrink:0;
 }
 .nav-loc{
+  position:absolute;top:50%;right:2.5rem;transform:translateY(-50%);
   font-family:'Space Mono',monospace;
   font-size:.68rem;font-weight:400;letter-spacing:.14em;
   text-transform:uppercase;color:var(--yellow);
-  flex-shrink:0;
+}
+@media(max-width:768px){
+  .nav-menu{left:1.25rem}
+  .nav-loc{right:1.25rem}
 }
 
 /* ── MENU OVERLAY ── */
@@ -817,7 +819,6 @@ nav{
 
 /* ── RESPONSIVE ── */
 @media(max-width:768px){
-  nav{padding:1rem 1.25rem}
   .slug{font-size:18vw}
   .slug-wrap{top:14%;transform:translateY(0)}
   .scroll-hint{display:none}
