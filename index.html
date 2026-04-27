@@ -86,11 +86,12 @@ body{
 
 /* ── NAV ── */
 nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;
+  position:fixed;top:0;left:0;right:0;width:100%;z-index:200;
   display:flex;align-items:center;justify-content:space-between;
   padding:1.4rem 2.5rem;
   mix-blend-mode:normal;
   pointer-events:none;
+  box-sizing:border-box;
 }
 .nav-menu{
   font-family:'Space Mono',monospace;
@@ -98,11 +99,13 @@ nav{
   text-transform:uppercase;color:var(--yellow);
   cursor:none;pointer-events:all;
   display:flex;align-items:center;gap:.5rem;
+  flex-shrink:0;
 }
 .nav-loc{
   font-family:'Space Mono',monospace;
   font-size:.68rem;font-weight:400;letter-spacing:.14em;
   text-transform:uppercase;color:var(--yellow);
+  flex-shrink:0;
 }
 
 /* ── MENU OVERLAY ── */
